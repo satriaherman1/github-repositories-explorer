@@ -4,7 +4,6 @@ import UserListSkeleton from "@src/components/user-list/skeleton";
 import GithubService from "@src/services/github.service";
 import { GithubUser, GithubUserSearchResponse } from "@src/types/github-user";
 import debounce from "just-debounce-it";
-
 import { useEffect, useRef, useState } from "react";
 
 function App() {
