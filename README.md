@@ -1,4 +1,4 @@
-Github Repositories Explorer
+#Github Repositories Explorer
 
 A modern React application that allows users to search for GitHub users in real-time. Built with React, TypeScript, and Vite.
 
