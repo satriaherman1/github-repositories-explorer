@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(174, 174, 238);
+  background: radial-gradient(
+    circle,
+    rgba(174, 174, 238, 1) 0%,
+    rgba(157, 183, 212, 1) 100%
+  );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  @apply text-xl md:text-4xl;
+}
