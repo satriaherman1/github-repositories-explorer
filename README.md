@@ -1,4 +1,4 @@
-#Github Repositories Explorer
+## Github Repositories Explorer
 
 A modern React application that allows users to search for GitHub users in real-time. Built with React, TypeScript, and Vite.
 
@@ -27,17 +27,20 @@ A modern React application that allows users to search for GitHub users in real-
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-git clone <repository-url>
-cd github-user-search
+git clone https://github.com/satriaherman1/github-repositories-explorer
+cd github-repositories-url
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create a `.env` file in the root directory and add your GitHub API token:
+
 ```
 VITE_GITHUB_API_URL=https://api.github.com
 VITE_GITHUB_TOKEN=your_github_token_here

@@ -21,6 +21,7 @@ export default function UserList({
   const [isOpenReposList, setIsOpenReposList] = useState<boolean>(false);
   const [repos, setRepos] = useState<GithubRepository[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isFetched, setIsFetched] = useState<boolean>(false);
   const [error, setError] = useState<string>();
 
   const githubService = new GithubService();
@@ -35,6 +36,7 @@ export default function UserList({
       setError("Failed to get repositories");
     } finally {
       setIsLoading(false);
+      setIsFetched(true);
     }
   };
 
@@ -69,7 +71,7 @@ export default function UserList({
   };
 
   useEffect(() => {
-    if (!isOpenReposList) return;
+    if (!isOpenReposList || isFetched) return;
     if (repos?.length > 0) return;
 
     getRepoList();

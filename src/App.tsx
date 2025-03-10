@@ -1,3 +1,4 @@
+import ErrorAlert from "@src/components/error-alert";
 import SearchBox from "@src/components/search-box";
 import UserList from "@src/components/user-list";
 import UserListSkeleton from "@src/components/user-list/skeleton";
@@ -59,8 +60,6 @@ function App() {
     }
   }, [searchQuery]);
 
-  console.log(isLoading);
-
   const renderUserList = (key: number, username: string, avatarUrl: string) => {
     switch (true) {
       case githubUsers.length === 1:
@@ -108,15 +107,7 @@ function App() {
       <h1 className="text-center uppercase">Github Repositories Explorer </h1>
       <p className="text-center mt-1">Search Github Repository by username</p>
       {error && (
-        <div className="mt-3 flex items-center gap-x-3 px-3 py-2 rounded-xl  border border-red-500 bg-red-100 text-red-900">
-          <span className=" w-6 h-6 flex items-center font-semibold justify-center text-white bg-red-500 rounded-full ">
-            i
-          </span>
-          <section>
-            <p className="font-semibold">Oops! Something went wrong.</p>
-            <p className="italic">{error}</p>
-          </section>
-        </div>
+        <ErrorAlert title="Oops! Something went wrong." description={error} />
       )}
 
       <SearchBox

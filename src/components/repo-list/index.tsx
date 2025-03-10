@@ -23,17 +23,19 @@ export default function RepoList({
         "m-4 gap-x-2 flex justify-between bg-gray-100  rounded-lg px-4 py-3"
       )}
     >
-      <section>
-        <h3 data-testid="repo-list-name">{name}</h3>
+      <section className="flex-1">
+        <h3 data-testid="repo-list-name" className="break-all">
+          {name}
+        </h3>
         <p
           data-testid="repo-list-description"
-          className="text-gray-600 text-sm break-words   mt-1"
+          className="text-gray-600 text-sm break-all   mt-1"
         >
           {description}
         </p>
       </section>
 
-      <div className="flex gap-x-2 items-start">
+      <div className="flex gap-x-2 items-start py-1">
         <span className="leading-[12px] text-sm">({stargazers_count})</span>
         <StartIcon width={15} height={15} />
       </div>

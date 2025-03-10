@@ -98,4 +98,20 @@ describe("Testing App Component", () => {
 
     vi.useRealTimers();
   });
+
+  it("should display error component when request to github api error", async () => {
+    vi.spyOn(GithubService.prototype, "getUsers").mockRejectedValueOnce(
+      new Error("Failed to get users data")
+    );
+
+    render(<App />);
+
+    const searchInput = screen.getByTestId("input-search");
+
+    fireEvent.change(searchInput, { target: { value: "budi hariyanto" } });
+
+    await waitFor(() => {
+      expect(screen.getByTestId("error-alert")).toBeInTheDocument();
+    });
+  });
 });
