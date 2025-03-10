@@ -30,7 +30,7 @@ A modern React application that allows users to search for GitHub users in real-
 
 ```bash
 git clone https://github.com/satriaherman1/github-repositories-explorer
-cd github-repositories-url
+cd github-repositories-explorer
 ```
 
 2. Install dependencies:
